@@ -303,7 +303,7 @@ static void applyRGBCurve(int width, int height, int *pixels, int *rgb) {
 static inline jint *getPointerArray(JNIEnv *env, jintArray buff) {
     jint *ptrBuff = NULL;
     if (buff != NULL)
-        ptrBuff = env->GetIntArrayElements(buff, false);
+        ptrBuff = env->GetIntArrayElements(buff, 0);
     return ptrBuff;
 }
 
